@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PS1xxx Emulator</title>
+        <meta charset="utf-8" name="ps1xxx" content="initial-scale=1">
+        <link rel="stylesheet" href="scripts/window.css">
+        <!--
+        <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="jquery.simplemodal.1.4.4.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+        -->
+        <script type="text/javascript" src="scripts/jquery-3.5.1.min.js"></script>
+        <script src="scripts/window.js"></script>
+    </head>
+
+    <body>
+        <center>
+        <form>
+        <h3>Device Select : 
+        <select id="deviceSelect" name="DEVICE" class="select3" style='background-color:#7FFF00'>
+            <option class="Device" value="2" name="PS1120" style='background-color:#A9A9A9' selected>PS1120</option>
+            <option class="Device" value="1" name="PS1060" style='background-color:#7FFF00'>PS1060</option>
+            <option class="Device" value="0" name="PS1030" style='background-color:#8B008B'>PS1030</option>
+        </select>
+        Group Type Select : 
+        <select id="groupSelect" name="GROUP" class="select3" style='background-color:#7FFF00'>
+            <option class="Group" value="4" style='background-color:#A9A9A9' disabled>4-Group</option>
+            <option class="Group" value="6" style='background-color:#7FFF00' disabled>6-Group</option>
+            <option class="Group" value="8" style='background-color:#8B008B' disabled>8-Group</option>
+            <option class="Group" value="10" style='background-color:#8B008B' selected>10-Group</option>
+            <option class="Group" value="12" style='background-color:#8B008B' disabled>12-Group</option>
+            <option class="Group" value="16" style='background-color:#8B008B' disabled>16-Group</option>
+        </select>
+        </h3>
+        <h4>Operation : 
+        <select id="id-cmd" name="COMMAND" class="select3" style='background-color:#7FFF00'>
+            <option class="switchOff" value="0" style='background-color:#A9A9A9'>SWITCH OFF</option>
+            <option class="switchOn" value="1" style='background-color:#7FFF00' selected>SWITCH ON</option>
+            <option class="holdOff" value="2" style='background-color:#8B008B'>HOLD OFF</option>
+            <option class="holdOn" value="3" style='background-color:#9932CC'>HOLD ON</option>
+            <option class="releaseOff" value="4" style='background-color:#EFAE00'>RELEASE OFF</option>
+            <option class="releaseOn" value="5" style='background-color:#F0E68C'>RELEASE ON</option>
+            <option class="forceOff" value="6" style='background-color:#98FB98'>FORCE OFF</option>
+            <option class="forceOn" value="7" style='background-color:#90EE90'>FORCE ON</option>
+        </select>
+        <input type="button" id="CommandGen" value="Command Generate">
+        </h4>
+        </form>
+
+        <div id='cascade'>
+        </div>
+        <div id='container'>
+        </div>
+
+        <br>
+        <label for="frame"><b>Frame : </b></label>
+        <select id="frame" name="frameName" style="width:300px"></select>
+        <input type="button" id="Analysis" value="Analysis">
+        <br>
+        <br>
+        <textarea id="console" cols="60" rows="8" style="display:block; resize:none;" readonly></textarea>
+        </center>
+    </body>
+</html>
